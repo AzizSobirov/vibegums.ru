@@ -10,6 +10,11 @@ body {
   color: var(--text-color);
   font-family: var(--font-primary);
   line-height: inherit;
+  background-color: #fff;
+  background-image: url("../img/bg.png");
+  background-position: center;
+  background-size: 256px auto;
+  background-repeat: repeat;
 
   &.overflow-hidden {
     overflow: hidden;

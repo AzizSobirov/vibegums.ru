@@ -8,13 +8,107 @@
   </head>
   <body>
     <div id="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="header__menu">
+            <ul class="menu">
+              <li class="menu-item active"><a href="#">VIBE</a></li>
+              <li class="menu-item"><a href="#about">О продукции</a></li>
+              <li class="menu-item"><a href="#assortment">Ассортимент</a></li>
+              <li class="menu-item"><a href="#buy">Где купить</a></li>
+              <li class="menu-item"><a href="#partnership">Партнерство</a></li>
+              <li class="menu-item"><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
       <main>
+        <!-- Hero -->
         <section class="hero">
           <div class="container">
-            <div class="text-h2">ПОЧУВСТВУЙ</div>
+            <div class="hero__img">
+              <img src="./assets/img/hero.png" alt="" />
+              <div class="hero__img-badge">НОВИНКА</div>
+            </div>
+
+            <div class="hero__content">
+              <div class="hero__title">
+                <span>ПОЧУВСТВУЙ</span>
+                <span>НАШ</span>
+              </div>
+              <img class="hero__logo" src="./assets/img/logo.svg" alt="" />
+              <div class="hero__subtitle">жевательная резинка</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+          <div class="container">
+            <!--  -->
+          </div>
+        </section>
+
+        <!-- Assortment -->
+        <section class="assortment" id="assortment">
+          <div class="container">
+            <!--  -->
+          </div>
+        </section>
+
+        <!-- Buy -->
+        <section class="buy" id="buy">
+          <div class="container">
+            <!--  -->
+          </div>
+        </section>
+
+        <!-- Partnership -->
+        <section class="partnership" id="partnership">
+          <div class="container">
+            <!--  -->
           </div>
         </section>
       </main>
+
+      <footer class="footer" id="contacts">
+        <div class="container">
+          <!--  -->
+          contacts
+        </div>
+      </footer>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section, footer"); // Include footer
+        const menuLinks = document.querySelectorAll(".menu-item a");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                menuLinks.forEach((link) =>
+                  link.parentElement.classList.remove("active")
+                );
+
+                const activeLink = document.querySelector(
+                  `.menu-item a[href="#${entry.target.id}"]`
+                );
+                if (activeLink) {
+                  activeLink.parentElement.classList.add("active");
+                }
+              }
+            });
+          },
+          { rootMargin: "0px 0px -50% 0px", threshold: 0.1 } // Adjusted settings
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      });
+    </script>
   </body>
 </html>

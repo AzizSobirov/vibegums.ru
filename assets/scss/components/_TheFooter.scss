@@ -1,8 +1,17 @@
 /* Styles for the TheFooter component */
 .footer {
-  padding: 100px 0 60px;
+  padding: 50px 0;
+  background-color: #393939;
+  background-image: url("../img/bg.png");
+  background-position: center;
+  background-size: 256px auto;
+  background-repeat: repeat;
 
   @include media("xl") {
     padding: 50px 0 110px;
+  }
+
+  .container {
+    background: green;
   }
 }
