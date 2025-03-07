@@ -73,7 +73,6 @@ section {
   }
   @include media("sm") {
     padding-top: 0;
-    margin-top: -50px;
   }
 
   .container {
@@ -84,23 +83,25 @@ section {
 
     @include media("md") {
       align-items: center;
+      gap: 40px;
     }
   }
 
   &__img {
+    --size: 510px;
     position: absolute;
     top: -90px;
     left: -25px;
-    min-width: 510px;
-    width: 510px;
-    height: 510px;
+    min-width: var(--size);
+    width: var(--size);
+    height: var(--size);
 
     @include media("xl") {
-      transform: scale(0.9);
+      --size: 480px;
     }
     @include media("lg") {
-      left: -100px;
-      transform: scale(0.8);
+      left: -5%;
+      --size: 400px;
     }
     @include media("md") {
       position: relative;
@@ -109,7 +110,7 @@ section {
       max-width: 100%;
     }
     @include media("sm") {
-      transform: scale(0.6);
+      --size: 300px;
     }
 
     &::after {
@@ -117,8 +118,8 @@ section {
       position: absolute;
       bottom: -28%;
       left: -14%;
-      width: 820px;
-      height: 790px;
+      width: calc(var(--size) * 1.6);
+      height: calc(var(--size) * 1.54);
       background: url(../img/hero-bg.png) center/contain no-repeat;
       pointer-events: none;
     }
@@ -141,6 +142,16 @@ section {
       background: var(--primary);
       border-radius: 9999px;
 
+      @include media("lg") {
+        font-size: 24px;
+      }
+      @include media("sm") {
+        top: 55px;
+        right: -10px;
+        padding: 12px 20px 6px;
+        font-size: 18px;
+      }
+
       &::before {
         content: "new";
         position: absolute;
@@ -154,6 +165,13 @@ section {
         text-align: center;
         text-transform: uppercase;
         opacity: 0.1;
+
+        @include media("lg") {
+          font-size: 64px;
+        }
+        @include media("sm") {
+          font-size: 48px;
+        }
       }
     }
   }

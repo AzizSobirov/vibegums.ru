@@ -102,8 +102,11 @@
     color: #fff;
     background: var(--primary);
 
-    @include media("sm") {
-      padding: 15px 0;
+    @include media("xl") {
+      padding: 20px 0;
+    }
+    @include media("lg") {
+      padding: 15px 0 120px;
     }
 
     .container {

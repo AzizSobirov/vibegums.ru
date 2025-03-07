@@ -97,8 +97,6 @@
   position: fixed;
   bottom: 0.9375rem;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translate(-50%);
   display: none;
   z-index: 10;
@@ -106,8 +104,6 @@
 
 @media screen and (max-width: 1279px) {
   .mobile__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -128,16 +124,10 @@
 .mobile__menu-tabs {
   padding: 1rem 1.25rem;
   width: 100%;
-  background: var(--primary);
+  background: var(--text-color);
   border-radius: 0.9375rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 2.5rem;
 }
@@ -157,21 +147,13 @@
 
 .mobile__menu-tab {
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .mobile__menu-tab svg > *,
 .mobile__menu-tab span {
-  -webkit-transition: var(--transition-ease);
   transition: var(--transition-ease);
 }
 
@@ -189,45 +171,27 @@
   min-height: 21.5625rem;
   max-height: calc(100vh - 7.5rem);
   color: #fff;
-  background: var(--primary);
+  background: var(--text-color);
   border-radius: 0.9375rem;
   display: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: var(--transition-ease);
   transition: var(--transition-ease);
   overflow: auto;
   opacity: 0;
-  -webkit-transform: translateY(1.25rem);
-  -ms-transform: translateY(1.25rem);
   transform: translateY(1.25rem);
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease,
-    -webkit-transform 0.3s ease;
   pointer-events: none;
 }
 
 .mobile__menu-content.show {
   opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
   transform: translateY(0);
   pointer-events: auto;
 }
 
 .mobile__menu-content .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
   gap: 2.1875rem;
 }

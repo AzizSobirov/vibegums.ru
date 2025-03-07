@@ -89,6 +89,31 @@ if (header) {
 
         if (tab.dataset.toggle == "menu") {
           tabsContent.innerHTML = menu.innerHTML;
+
+          let menuLinks = tabsContent.querySelectorAll(".menu-item a");
+          menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              tabs.forEach((tab) => {
+                tab.classList.remove("active");
+              });
+
+              // Add animation for hiding
+              tabsBody.classList.remove("show");
+              tabsBody.addEventListener(
+                "transitionend",
+                function handler(event) {
+                  if (
+                    event.propertyName === "transform" &&
+                    !tabsBody.classList.contains("show")
+                  ) {
+                    tabsBody.style.display = "none";
+                    tabsContent.innerHTML = "";
+                    tabsBody.removeEventListener("transitionend", handler);
+                  }
+                }
+              );
+            });
+          });
         } else {
           tabsContent.innerHTML = servicesSubMenu.outerHTML;
         }
