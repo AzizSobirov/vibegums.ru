@@ -21,7 +21,7 @@
   &__menu {
     position: relative;
     padding-left: 24px;
-    --position: 5px;
+    --dot-position: 5px;
 
     &::before,
     &::after {
@@ -40,7 +40,7 @@
     }
 
     &::after {
-      top: 5px;
+      top: var(--dot-position);
       left: -5px;
       z-index: 2;
       width: 12px;
