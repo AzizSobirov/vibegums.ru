@@ -37,72 +37,72 @@
   }
 }
 
-.text-primary {
-  color: var(--primary);
-}
+// .text-primary {
+//   color: var(--primary);
+// }
 
-.text-white {
-  color: #fff;
-}
+// .text-white {
+//   color: #fff;
+// }
 
-.font-light {
-  font-weight: 300;
-}
+// .font-light {
+//   font-weight: 300;
+// }
 
-.font-regular {
-  font-weight: 400;
-}
+// .font-regular {
+//   font-weight: 400;
+// }
 
-.font-medium {
-  font-weight: 500;
-}
+// .font-medium {
+//   font-weight: 500;
+// }
 
-.font-semibold {
-  font-weight: 600;
-}
+// .font-semibold {
+//   font-weight: 600;
+// }
 
-.font-bold {
-  font-weight: 700;
-}
+// .font-bold {
+//   font-weight: 700;
+// }
 
-.underline {
-  text-decoration: underline;
-}
+// .underline {
+//   text-decoration: underline;
+// }
 
-.line-through {
-  text-decoration: line-through;
-}
+// .line-through {
+//   text-decoration: line-through;
+// }
 
-.text-xs {
-  font-size: 12px;
-}
+// .text-xs {
+//   font-size: 12px;
+// }
 
-.text-sm {
-  font-size: 14px;
-}
+// .text-sm {
+//   font-size: 14px;
+// }
 
-.text-h1 {
-  font-size: 48px;
-  font-weight: 400;
-}
+// .text-h1 {
+//   font-size: 48px;
+//   font-weight: 400;
+// }
 
-.text-h2 {
-  font-size: 42px;
-  font-weight: 400;
+// .text-h2 {
+//   font-size: 42px;
+//   font-weight: 400;
 
-  @include media("lg") {
-    font-size: 28px;
-  }
-  @include media("sm") {
-    font-size: 20px;
-  }
-}
+//   @include media("lg") {
+//     font-size: 28px;
+//   }
+//   @include media("sm") {
+//     font-size: 20px;
+//   }
+// }
 
-.text-h3 {
-  font-size: 24px;
-  font-weight: 400;
+// .text-h3 {
+//   font-size: 24px;
+//   font-weight: 400;
 
-  @include media("sm") {
-    font-size: 18px;
-  }
-}
+//   @include media("sm") {
+//     font-size: 18px;
+//   }
+// }

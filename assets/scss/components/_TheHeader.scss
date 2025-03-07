@@ -8,6 +8,16 @@
   // transition: var(--transition-ease);
   z-index: 10;
 
+  @include media("2xl") {
+    transform: translate(calc(-50% - 550px), -50%);
+  }
+  @include media("1320px") {
+    transform: translate(calc(-50% - 500px), -50%);
+  }
+  @include media("xl") {
+    display: none;
+  }
+
   &__menu {
     position: relative;
     padding-left: 24px;
